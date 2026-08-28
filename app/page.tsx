@@ -6,6 +6,7 @@ import Speakers from "@/components/Speakers";
 import Program from "@/components/Program";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <a className="skip" href="#main">
         Sari la conținut
       </a>
+      <ScrollReveal />
       <Header />
       <main id="main">
         <span id="top" />

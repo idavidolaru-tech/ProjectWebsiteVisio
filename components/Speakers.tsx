@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface Speaker {
   id: string;
@@ -124,24 +124,6 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
 }
 
 export default function Speakers() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setIsVisible(true);
-        });
-      },
-      { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
-    );
-
-    const els = document.querySelectorAll(".speakers-grid .reveal");
-    els.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className="section alt" id="speakers">
       <div className="container">

@@ -1,31 +1,9 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 export default function About() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setIsVisible(true);
-        });
-      },
-      { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
-    );
-
-    const els = document.querySelectorAll(".about-copy, .about-visual");
-    els.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className="section alt" id="about">
       <div className="container">
         <div className="about-grid">
-          <div className={`about-copy reveal${isVisible ? " in" : ""}`}>
+          <div className="about-copy reveal">
             <span className="section-tag">Cine suntem</span>
             <h2 className="section-title">Mai mult decât o conferință — o întâlnire între generații.</h2>
             <p>
@@ -52,7 +30,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className={`about-visual reveal${isVisible ? " in" : ""}`}>
+          <div className="about-visual reveal">
             <span className="blob blob-gold" />
             <span className="blob blob-royal" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
