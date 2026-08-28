@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins, Inter } from "next/font/google";
+import { Poppins, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import IntroOverlay from "@/components/IntroOverlay";
 
@@ -14,7 +14,7 @@ var m=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').m
 var s=false;try{s=sessionStorage.getItem('visio-intro-seen')==='1'}catch(e){}
 if(m||s)return;
 var d=document.documentElement;d.classList.add('intro-lock');
-setTimeout(function(){d.classList.remove('intro-lock')},4000);
+setTimeout(function(){d.classList.remove('intro-lock')},5200);
 }catch(e){}})();`;
 
 const poppins = Poppins({
@@ -28,6 +28,13 @@ const inter = Inter({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  subsets: ["latin", "latin-ext"],
+  weight: ["600", "700"],
+  variable: "--font-hand",
   display: "swap",
 });
 
@@ -55,7 +62,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ro" className={`${poppins.variable} ${inter.variable}`}>
+    <html
+      lang="ro"
+      className={`${poppins.variable} ${inter.variable} ${caveat.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         <script dangerouslySetInnerHTML={{ __html: INTRO_BOOT }} />
         <noscript>
