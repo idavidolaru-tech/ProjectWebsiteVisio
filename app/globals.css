@@ -231,7 +231,7 @@ img { max-width: 100%; display: block; }
 @media (prefers-reduced-motion: no-preference) {
   .hero-center > * { animation: hero-in .7s cubic-bezier(.2,.7,.3,1) both; }
   .hero-center > .eyebrow         { animation-delay: .05s; }
-  .hero-center > .hero-logo       { animation: hero-in .7s cubic-bezier(.2,.7,.3,1) .15s both, logo-breathe 5s ease-in-out 1.2s infinite; }
+  .hero-center > .hero-logo       { animation: hero-in .7s cubic-bezier(.2,.7,.3,1) .15s both; }
   .hero-center > h1               { animation-delay: .28s; }
   .hero-center > .hero-lead       { animation-delay: .42s; }
   .hero-center > .event-strip     { animation-delay: .54s; }
@@ -240,10 +240,6 @@ img { max-width: 100%; display: block; }
   .hero-center > .hero-scroll     { animation-delay: .92s; }
 }
 @keyframes hero-in { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
-@keyframes logo-breathe {
-  0%,100% { transform: translateY(0) scale(1); filter: drop-shadow(0 6px 14px rgba(43,83,192,.12)); }
-  50% { transform: translateY(-4px) scale(1.015); filter: drop-shadow(0 10px 24px rgba(255,196,14,.3)); }
-}
 
 /* Shimmering accent word (gold ↔ blue) */
 .hero h1 .accent { color: var(--blue); }
@@ -549,4 +545,87 @@ img { max-width: 100%; display: block; }
   .speaker.pop { animation: none; }
   .speaker:hover, .speaker:focus-visible, .speaker.expanded { transform: none; }
   .speaker:hover .speaker-photo, .speaker:focus-visible .speaker-photo, .speaker.expanded .speaker-photo { transform: none; }
+}
+
+/* ============================================================
+   Intro title sequence — first visit of a session only.
+   Echoes the VISIO mark: a gold ring is drawn, the logo rises
+   in, a gold "growth" arrow sweeps up, brand circle motifs pop.
+   Then the panel wipes up, trailing a gold edge, into the hero.
+   ============================================================ */
+.intro-lock { overflow: hidden; }
+.intro-lock body { overflow: hidden; }
+
+.intro-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  display: none;
+  place-items: center;
+  background: radial-gradient(125% 125% at 50% 38%, #1c2676 0%, var(--navy) 56%, #0c1047 100%);
+  cursor: pointer;
+  will-change: transform;
+}
+.intro-lock .intro-overlay { display: grid; }
+
+.intro-overlay.is-leaving {
+  transform: translateY(-100%);
+  transition: transform .8s cubic-bezier(.76, 0, .24, 1);
+}
+.intro-overlay::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px;
+  background: var(--gold); transform: scaleY(0); transform-origin: bottom;
+}
+.intro-overlay.is-leaving::after {
+  transform: scaleY(1);
+  transition: transform .8s cubic-bezier(.76, 0, .24, 1);
+}
+
+.intro-stage {
+  position: relative; width: min(320px, 72vw); aspect-ratio: 1;
+  display: grid; place-items: center;
+}
+.intro-overlay.is-leaving .intro-stage {
+  opacity: 0; transform: scale(.94);
+  transition: opacity .4s ease, transform .55s ease;
+}
+
+.intro-ring { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.intro-ring circle {
+  fill: none; stroke: var(--gold); stroke-width: 3; stroke-linecap: round;
+  stroke-dasharray: 760; stroke-dashoffset: 760;
+  animation: intro-ring-draw .95s cubic-bezier(.6, .1, .2, 1) .15s forwards;
+}
+@keyframes intro-ring-draw { to { stroke-dashoffset: 0; } }
+
+.intro-logo {
+  width: 60%; height: auto; filter: brightness(0) invert(1);
+  opacity: 0; transform: scale(.8) translateY(8px);
+  animation: intro-fade-up .7s cubic-bezier(.2, .7, .3, 1) .35s forwards;
+}
+@keyframes intro-fade-up { to { opacity: 1; transform: none; } }
+
+.intro-arrow { position: absolute; right: 1%; top: -3%; width: 33%; height: auto; overflow: visible; }
+.intro-arrow path {
+  fill: none; stroke: var(--gold); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 260; stroke-dashoffset: 260;
+  animation: intro-arrow-draw .55s ease .85s forwards;
+}
+@keyframes intro-arrow-draw { to { stroke-dashoffset: 0; } }
+
+.intro-dot { position: absolute; border-radius: 50%; opacity: 0; transform: scale(0); }
+.intro-dot.d1 { width: 14px; height: 14px; background: var(--gold); left: 1%;  top: 15%;    animation: intro-pop .5s cubic-bezier(.34, 1.56, .64, 1) 1.02s forwards; }
+.intro-dot.d2 { width: 10px; height: 10px; background: #4064d8;     right: 5%; bottom: 9%;  animation: intro-pop .5s cubic-bezier(.34, 1.56, .64, 1) 1.14s forwards; }
+.intro-dot.d3 { width: 7px;  height: 7px;  background: #fff;         left: 15%; bottom: 1%;  animation: intro-pop .5s cubic-bezier(.34, 1.56, .64, 1) 1.24s forwards; }
+@keyframes intro-pop { to { opacity: 1; transform: scale(1); } }
+
+.intro-skiphint {
+  position: absolute; left: 0; right: 0; bottom: clamp(28px, 6vh, 54px);
+  text-align: center; font-family: var(--font-head); font-weight: 600;
+  font-size: .68rem; letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(255, 255, 255, .45);
+  opacity: 0; animation: intro-fade-up .5s ease 1.5s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-overlay { display: none !important; }
+  .intro-lock, .intro-lock body { overflow: auto; }
 }
