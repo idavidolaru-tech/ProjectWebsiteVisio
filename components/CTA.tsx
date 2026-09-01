@@ -23,7 +23,7 @@ export default function CTA() {
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none" />
             </svg>
-            Urmărește pe Instagram
+            Urmărește-ne pe Instagram
           </a>
         </div>
         <p className="cta-phone">

@@ -16,11 +16,12 @@ export default function Challenge() {
               </svg>
             </span>
             <span className="pcard-tag">Provocarea</span>
-            <h3>Succesul e rareori atât de simplu pe cât pare.</h3>
+            <h3>Succesul nu arată niciodată tot drumul.</h3>
             <p>
-              De prea multe ori, elevii cred că succesul și câștigurile financiare vin fără efort. În realitate,
-              tinerii au foarte puține ocazii să discute direct cu antreprenori despre dificultățile, eșecurile și
-              provocările reale din spatele unei afaceri.
+              Într-o lume în care succesul este adesea prezentat ca fiind rapid și simplu, liceenii au puține ocazii
+               să vadă ce se află cu adevărat în spatele unui business. Greșelile, deciziile dificile, riscurile și 
+               momentele de îndoială rămân, de cele mai multe ori, în afara poveștii.
+
             </p>
           </article>
           <article className="pcard solution reveal">
@@ -32,10 +33,11 @@ export default function Challenge() {
               </svg>
             </span>
             <span className="pcard-tag">Soluția</span>
-            <h3>VISIO face legătura.</h3>
+            <h3>Aducem realitatea mai aproape.</h3>
             <p>
-              Într-o singură zi, elevii intră în conversații sincere cu fondatori și lideri — prin paneluri dinamice și
-              ateliere practice care arată ce înseamnă cu adevărat să construiești o afacere.
+              VISIO le oferă liceenilor acces direct la experiența celor care au construit deja. Prin conversații autentice
+               și workshopuri interactive, transformăm poveștile de succes în lecții reale și oferim o perspectivă realistă
+                asupra antreprenoriatului dincolo de rezultate.
             </p>
           </article>
         </div>
