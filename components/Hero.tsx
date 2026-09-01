@@ -1,8 +1,6 @@
 export default function Hero() {
   return (
     <section className="hero">
-      <span className="blob blob-gold" style={{ width: 280, height: 280, right: -150, top: -170, opacity: 0.8 }} />
-      <span className="blob blob-royal" style={{ width: 70, height: 70, left: "3%", top: "24%", opacity: 0.45 }} />
       <div className="container">
         <div className="hero-grid">
           <div className="hero-copy">
@@ -12,46 +10,36 @@ export default function Hero() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="hero-logo" src="/assets/img/visio-logo.png" alt="VISIO logo" />
             <h1>
-              Fii parte din următoarea{" "}
-              <span className="brush">
-                <svg className="brush-mark" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
-                  <path d="M6 28 C 60 10, 150 20, 220 16 C 300 11, 360 24, 396 12 L 394 100 C 330 114, 240 100, 160 107 C 92 112, 34 104, 6 112 Z" />
-                </svg>
-                <span className="brush-word">generație</span>
-              </span>{" "}
-              de antreprenori a României.
+              Fii parte din următoarea generație de antreprenori a României.
             </h1>
             <p className="hero-lead">
               VISIO este mai mult decât o conferință. Este locul în care viitorul antreprenoriatului
               românesc întâlnește experiența și viziunea celor care îl definesc astăzi.
             </p>
 
-            <div className="event-strip" role="group" aria-label="Detalii eveniment">
-              <div className="event-item">
-                <span className="ei-ic" aria-hidden="true">
+            <div className="event-info">
+              <div className="event-card">
+                <span className="event-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                     <rect x="3" y="4.5" width="18" height="17" rx="2.5" />
                     <path d="M8 2.5v4M16 2.5v4M3 9.5h18" />
                   </svg>
                 </span>
                 <div>
-                  <span className="ei-label">Dată</span>
-                  <b className="ei-value is-date">22 Octombrie 2026</b>
-                  <span className="ei-sub">Notează în calendar</span>
+                  <span className="event-label">Dată</span>
+                  <b className="event-value">22 Octombrie 2026</b>
                 </div>
               </div>
-              <div className="event-sep" aria-hidden="true" />
-              <div className="event-item">
-                <span className="ei-ic" aria-hidden="true">
+              <div className="event-card">
+                <span className="event-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z" />
                     <circle cx="12" cy="10" r="2.6" />
                   </svg>
                 </span>
                 <div>
-                  <span className="ei-label">Locație</span>
-                  <b className="ei-value">București</b>
-                  <span className="ei-sub">Locația exactă urmează</span>
+                  <span className="event-label">Locație</span>
+                  <b className="event-value">București</b>
                 </div>
               </div>
             </div>
@@ -80,34 +68,35 @@ export default function Hero() {
           </div>
 
           <div className="hero-visual">
-            <svg className="hv-arrow" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+            <svg className="hv-arrow" viewBox="0 0 220 280" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
               <defs>
-                <linearGradient id="hvArrowGrad" x1="0" y1="1" x2="1" y2="0">
-                  <stop offset="0" stopColor="var(--royal)" />
-                  <stop offset="0.45" stopColor="#17a6c6" />
-                  <stop offset="0.72" stopColor="var(--gold)" />
-                  <stop offset="1" stopColor="var(--navy)" />
+                <linearGradient id="hvArrowGrad" x1="0.5" y1="1" x2="0.5" y2="0">
+                  <stop offset="0%" stopColor="var(--royal)" />
+                  <stop offset="40%" stopColor="#17a6c6" />
+                  <stop offset="75%" stopColor="var(--gold)" />
                 </linearGradient>
               </defs>
               <path
-                className="hv-arrow-line"
-                d="M22 178 C 66 150, 92 120, 176 26"
+                d="M110 240 L110 40"
                 stroke="url(#hvArrowGrad)"
-                strokeWidth="24"
+                strokeWidth="32"
                 strokeLinecap="round"
+                fill="none"
               />
               <path
-                className="hv-arrow-head"
-                d="M176 26 l-34 4 M176 26 l-4 34"
+                d="M110 40 L75 75 M110 40 L145 75"
                 stroke="url(#hvArrowGrad)"
-                strokeWidth="24"
+                strokeWidth="32"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                fill="none"
               />
             </svg>
 
-            <span className="hv-halftone hv-halftone--a" aria-hidden="true" />
-            <span className="hv-halftone hv-halftone--b" aria-hidden="true" />
+            <div className="hv-shapes">
+              <div className="hv-shape hv-shape-1" aria-hidden="true" />
+              <div className="hv-shape hv-shape-2" aria-hidden="true" />
+            </div>
 
             <div className="hv-frame">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -116,19 +105,6 @@ export default function Hero() {
                 alt="Liceeni ridicând mâinile, hotărâți să construiască viitorul"
               />
             </div>
-
-            <span className="hv-hand" aria-hidden="true">
-              Curaj. Viziune.{" "}
-              <span className="hv-hand-impact">
-                Impact.
-                <svg className="hv-hand-ring" viewBox="0 0 160 70" fill="none" aria-hidden="true">
-                  <path d="M20 44 C 8 20, 44 8, 82 8 C 128 8, 152 24, 148 40 C 144 58, 96 66, 56 62 C 24 59, 10 46, 26 30" />
-                </svg>
-              </span>
-            </span>
-
-            <span className="blob blob-gold" style={{ width: 120, height: 120, right: -18, bottom: 22, opacity: 0.9 }} />
-            <span className="blob blob-royal" style={{ width: 84, height: 84, left: -24, top: 40, opacity: 0.9 }} />
           </div>
         </div>
 

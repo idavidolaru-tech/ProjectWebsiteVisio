@@ -138,18 +138,18 @@ img { max-width: 100%; display: block; }
 .hero-banner-tag b { display: block; font-family: var(--font-head); font-weight: 600; color: var(--navy); font-size: .98rem; line-height: 1.1; }
 .hero-banner-tag span { font-size: .8rem; color: var(--muted); }
 
-/* Conference "when / where" strip — enlarged, prominent */
-.event-strip {
-  display: flex; align-items: stretch; background: #fff; border: 1px solid var(--line);
-  border-radius: 18px; box-shadow: var(--shadow-md); padding: 6px; margin: 4px auto 30px; max-width: 580px;
+/* Event information cards */
+.event-info {
+  display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap;
 }
-.event-item { display: flex; align-items: center; gap: 16px; padding: 16px 24px; flex: 1; }
-.event-item .ei-ic { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 15px; background: rgba(43,83,192,.12); color: var(--royal); flex: none; }
-.event-item .ei-ic svg { width: 26px; height: 26px; }
-.ei-label { display: block; font-family: var(--font-head); font-weight: 600; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
-.ei-value { display: block; font-family: var(--font-head); font-weight: 800; font-size: clamp(1.6rem, 2.8vw, 2.15rem); color: var(--navy); line-height: 1.02; letter-spacing: -.01em; }
-.ei-sub { display: block; font-size: .82rem; color: var(--muted); margin-top: 4px; }
-.event-sep { width: 1px; background: var(--line); margin: 12px 0; flex: none; }
+.event-card {
+  display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line);
+  border-radius: 14px; padding: 18px 22px; box-shadow: var(--shadow-sm); flex: 1; min-width: 200px;
+}
+.event-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(43,83,192,.1); color: var(--royal); flex: none; }
+.event-icon svg { width: 24px; height: 24px; }
+.event-label { display: block; font-family: var(--font-head); font-weight: 600; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.event-value { display: block; font-family: var(--font-head); font-weight: 700; font-size: 1.15rem; color: var(--navy); line-height: 1.2; }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -196,64 +196,49 @@ img { max-width: 100%; display: block; }
 /* Enlarged, uppercase confirmed date */
 .ei-value.is-date { text-transform: uppercase; font-size: clamp(1.35rem, 2.3vw, 1.75rem); letter-spacing: .005em; }
 
-/* ---- Hero visual — banner graphic language (arrow, halftone, brush, hand) ---- */
-.hero-visual { position: relative; align-self: stretch; display: grid; place-items: center; min-height: 340px; }
-.hero-visual > .blob { z-index: 1; animation: blob-float 8s ease-in-out infinite; }
+/* ---- Hero visual — clean, modern design ---- */
+.hero-visual {
+  position: relative; align-self: stretch; display: grid; place-items: center;
+  min-height: 420px; z-index: 1;
+}
+
+/* Geometric shapes */
+.hv-shapes { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.hv-shape {
+  position: absolute; border-radius: 50%;
+}
+.hv-shape-1 {
+  width: 240px; height: 240px; top: -80px; left: -100px;
+  background: linear-gradient(135deg, rgba(30,64,175,.08), rgba(23,166,198,.05));
+  filter: blur(40px);
+}
+.hv-shape-2 {
+  width: 180px; height: 180px; bottom: -40px; right: -60px;
+  background: linear-gradient(135deg, rgba(253,185,19,.08), rgba(30,64,175,.04));
+  filter: blur(35px);
+}
+
+/* Upward gradient arrow */
+.hv-arrow {
+  position: absolute; z-index: 2; width: 260px; height: 300px;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  filter: drop-shadow(0 8px 16px rgba(19,23,83,.12));
+  pointer-events: none;
+}
 
 /* Framed group photo */
 .hv-frame {
-  position: relative; z-index: 2; width: min(100%, 440px);
-  border-radius: 22px; overflow: hidden; background: var(--bg-2);
-  border: 8px solid #fff; box-shadow: var(--shadow-lg);
-  rotate: 1.5deg;
+  position: relative; z-index: 3; width: min(100%, 400px);
+  border-radius: 18px; overflow: hidden; background: var(--bg-2);
+  border: 6px solid #fff; box-shadow: var(--shadow-lg);
 }
-.hv-frame img { width: 100%; height: clamp(300px, 42vh, 420px); object-fit: cover; object-position: 50% 30%; }
-
-/* Signature diagonal "growth" arrow — draws in, then floats */
-.hv-arrow {
-  position: absolute; z-index: 1; width: 118%; height: 118%;
-  right: -14%; top: -16%; overflow: visible; pointer-events: none;
-  filter: drop-shadow(0 14px 26px rgba(19,23,83,.18));
+.hv-frame img {
+  width: 100%; height: clamp(280px, 35vh, 380px);
+  object-fit: cover; object-position: 50% 30%;
 }
-.hv-arrow .hv-arrow-line, .hv-arrow .hv-arrow-head { stroke-dasharray: 1; stroke-dashoffset: 1; }
-.hv-arrow .hv-arrow-line { animation: hv-draw 1s cubic-bezier(.6,.05,.2,1) .55s forwards; }
-.hv-arrow .hv-arrow-head { animation: hv-draw .35s ease 1.5s forwards; }
-@keyframes hv-draw { to { stroke-dashoffset: 0; } }
-@media (prefers-reduced-motion: no-preference) {
-  .hv-arrow { animation: arrow-float 7s ease-in-out infinite 2.2s; }
-}
-
-/* Halftone dot fields */
-.hv-halftone {
-  position: absolute; z-index: 1; pointer-events: none;
-  background-image: radial-gradient(var(--royal) 1.5px, transparent 1.7px);
-  background-size: 12px 12px; opacity: .5;
-  -webkit-mask-image: linear-gradient(120deg, #000, transparent 78%);
-          mask-image: linear-gradient(120deg, #000, transparent 78%);
-}
-.hv-halftone--a { width: 150px; height: 120px; right: -6%; top: -4%; rotate: -6deg; }
-.hv-halftone--b { width: 120px; height: 96px; left: -8%; bottom: 6%; rotate: 8deg; opacity: .4; }
-
-/* Handwritten tagline with a gold circle around "Impact." */
-.hv-hand {
-  position: absolute; z-index: 3; right: 1%; top: -6%; max-width: 7em;
-  font-family: var(--font-hand), "Comic Sans MS", cursive;
-  font-weight: 700; font-size: clamp(1.2rem, 2.6vw, 1.7rem);
-  line-height: 1.1; color: var(--navy); text-align: right; rotate: -3deg;
-  text-shadow: 0 1px 0 #fff, 0 2px 12px rgba(238,244,252,.95);
-}
-.hv-hand-impact { position: relative; display: inline-block; white-space: nowrap; }
-.hv-hand-ring { position: absolute; left: -16%; top: -34%; width: 132%; height: 168%; overflow: visible; }
-.hv-hand-ring path {
-  fill: none; stroke: var(--gold); stroke-width: 4; stroke-linecap: round;
-  stroke-dasharray: 1; stroke-dashoffset: 1; animation: hv-draw .6s ease 1.7s forwards;
-}
-
-@keyframes arrow-float { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-12px) rotate(-4deg); } }
 
 @media (max-width: 560px) {
-  .hv-arrow, .hv-halftone { display: none; }
-  .hv-hand { position: static; rotate: -2deg; display: block; margin: 16px auto 0; text-align: center; }
+  .hv-arrow { display: none; }
 }
 
 /* Gentle drift on the decorative circles */
@@ -279,7 +264,7 @@ img { max-width: 100%; display: block; }
   .hero-copy > .hero-logo       { animation: hero-in .7s cubic-bezier(.2,.7,.3,1) .15s both; }
   .hero-copy > h1               { animation-delay: .28s; }
   .hero-copy > .hero-lead       { animation-delay: .42s; }
-  .hero-copy > .event-strip     { animation-delay: .54s; }
+  .hero-copy > .event-info      { animation-delay: .54s; }
   .hero-copy > .hero-actions    { animation-delay: .66s; }
   .hero-copy > .hero-foundation { animation-delay: .78s; }
   .hero-visual                  { animation: hero-in .8s cubic-bezier(.2,.7,.3,1) .5s both; }
@@ -306,12 +291,11 @@ img { max-width: 100%; display: block; }
 @keyframes scroll-bounce { 0%,100% { transform: translateY(0); opacity: .55; } 50% { transform: translateY(6px); opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero > .blob, .hero-visual > .blob, .hero-actions .btn-primary,
+  .hero > .blob, .hero-actions .btn-primary,
   .hero-copy > *, .hero-copy > .hero-logo, .hero .hero-scroll, .hero-visual,
   .hero h1 .accent, .hero-scroll svg,
-  .brush-mark, .hv-arrow, .hv-arrow-line, .hv-arrow-head, .hv-hand-ring path { animation: none !important; }
+  .brush-mark { animation: none !important; }
   .brush-mark { transform: rotate(-1.4deg) scaleX(1); }
-  .hv-arrow .hv-arrow-line, .hv-arrow .hv-arrow-head, .hv-hand-ring path { stroke-dashoffset: 0; }
 }
 
 /* ---------- Section scaffolding ---------- */
