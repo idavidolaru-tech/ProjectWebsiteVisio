@@ -68,25 +68,27 @@ export default function Hero() {
           </div>
 
           <div className="hero-visual">
-            <svg className="hv-arrow" viewBox="0 0 220 280" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <svg className="hv-arrow" viewBox="0 0 240 320" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
               <defs>
                 <linearGradient id="hvArrowGrad" x1="0.5" y1="1" x2="0.5" y2="0">
                   <stop offset="0%" stopColor="var(--royal)" />
-                  <stop offset="40%" stopColor="#17a6c6" />
-                  <stop offset="75%" stopColor="var(--gold)" />
+                  <stop offset="35%" stopColor="#17a6c6" />
+                  <stop offset="70%" stopColor="var(--gold)" />
+                  <stop offset="100%" stopColor="var(--gold)" />
                 </linearGradient>
               </defs>
               <path
-                d="M110 240 L110 40"
+                d="M50 280 C 80 240, 100 200, 120 140 C 135 100, 140 60, 120 20"
                 stroke="url(#hvArrowGrad)"
-                strokeWidth="32"
+                strokeWidth="38"
                 strokeLinecap="round"
+                strokeLinejoin="round"
                 fill="none"
               />
               <path
-                d="M110 40 L75 75 M110 40 L145 75"
+                d="M120 20 L80 60 M120 20 L160 60"
                 stroke="url(#hvArrowGrad)"
-                strokeWidth="32"
+                strokeWidth="38"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
