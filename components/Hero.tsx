@@ -80,7 +80,7 @@ export default function Hero() {
               <path
                 d="M50 280 C 80 240, 100 200, 120 140 C 135 100, 140 60, 120 20"
                 stroke="url(#hvArrowGrad)"
-                strokeWidth="38"
+                strokeWidth="50"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
@@ -88,7 +88,7 @@ export default function Hero() {
               <path
                 d="M120 20 L80 60 M120 20 L160 60"
                 stroke="url(#hvArrowGrad)"
-                strokeWidth="38"
+                strokeWidth="50"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
