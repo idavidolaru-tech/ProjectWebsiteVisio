@@ -218,10 +218,37 @@ img { max-width: 100%; display: block; }
   filter: blur(35px);
 }
 
+/* Halftone dot fields */
+.hv-halftone {
+  position: absolute; z-index: 1; pointer-events: none;
+  background-image: radial-gradient(var(--royal) 1.5px, transparent 1.7px);
+  background-size: 12px 12px; opacity: .5;
+  -webkit-mask-image: linear-gradient(120deg, #000, transparent 78%);
+          mask-image: linear-gradient(120deg, #000, transparent 78%);
+}
+.hv-halftone--a { width: 150px; height: 120px; right: -6%; top: -4%; rotate: -6deg; }
+.hv-halftone--b { width: 120px; height: 96px; left: -8%; bottom: 6%; rotate: 8deg; opacity: .4; }
+
+/* Handwritten tagline with a gold circle around "Impact." */
+.hv-hand {
+  position: absolute; z-index: 3; right: 1%; top: -6%; max-width: 7em;
+  font-family: var(--font-hand), "Comic Sans MS", cursive;
+  font-weight: 700; font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  line-height: 1.1; color: var(--navy); text-align: right; rotate: -3deg;
+  text-shadow: 0 1px 0 #fff, 0 2px 12px rgba(238,244,252,.95);
+}
+.hv-hand-impact { position: relative; display: inline-block; white-space: nowrap; }
+.hv-hand-ring { position: absolute; left: -16%; top: -34%; width: 132%; height: 168%; overflow: visible; }
+.hv-hand-ring path {
+  fill: none; stroke: var(--gold); stroke-width: 4; stroke-linecap: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1; animation: hv-draw .6s ease 1.7s forwards;
+}
+@keyframes hv-draw { to { stroke-dashoffset: 0; } }
+
 /* Upward gradient arrow */
 .hv-arrow {
-  position: absolute; z-index: 1; width: 118%; height: 118%;
-  right: -14%; top: -16%; overflow: visible; pointer-events: none;
+  position: absolute; z-index: 1; width: 110%; height: 118%;
+  right: -5%; top: -16%; overflow: visible; pointer-events: none;
   filter: drop-shadow(0 14px 26px rgba(19,23,83,.18));
 }
 
@@ -237,7 +264,8 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 560px) {
-  .hv-arrow { display: none; }
+  .hv-arrow, .hv-halftone { display: none; }
+  .hv-hand { position: static; rotate: -2deg; display: block; margin: 16px auto 0; text-align: center; }
 }
 
 /* Gentle drift on the decorative circles */
@@ -293,8 +321,9 @@ img { max-width: 100%; display: block; }
   .hero > .blob, .hero-actions .btn-primary,
   .hero-copy > *, .hero-copy > .hero-logo, .hero .hero-scroll, .hero-visual,
   .hero h1 .accent, .hero-scroll svg,
-  .brush-mark { animation: none !important; }
+  .brush-mark, .hv-hand-ring path { animation: none !important; }
   .brush-mark { transform: rotate(-1.4deg) scaleX(1); }
+  .hv-hand-ring path { stroke-dashoffset: 0; }
 }
 
 /* ---------- Section scaffolding ---------- */
@@ -421,10 +450,10 @@ top: -7px;}
 .speaker-photo.p-emil    { background-image: url("/assets/speakers/emil-munteanu.jpg");   background-position: 50% 14%; }
 .speaker-photo.p-ioana   { background-image: url("/assets/speakers/ioana-ceausu.jpg");     background-position: 53% 45%; }
 .speaker-photo.p-alex    { background-image: url("/assets/speakers/alexandru-lapusan.jpg"); background-position: 50% 20%; }
-.speaker-photo.p-sergiu  { background-image: url("/assets/speakers/sergiu-manea.jpg");     background-position: 48% 12%; }
+.speaker-photo.p-sergiu  { background-image: url("/assets/speakers/sergiu-manea.jpeg");     background-position: 48% 12%; }
 .speaker-photo.p-radu    { background-image: url("/assets/speakers/radu-savopol.jpg");     background-position: 55% 16%; }
 .speaker-photo.p-marius  { background-image: url("/assets/speakers/marius-bostan.jpg");    background-position: 50% 30%; }
-.speaker-photo.p-felixt  { background-image: url("/assets/speakers/felix-tataru.jpg");     background-position: 46% 16%; }
+.speaker-photo.p-felixt  { background-image: url("/assets/speakers/felix-tataru.jpeg");    background-position: 46% 16%; }
 
 /* Speakers "to be announced" — black silhouettes */
 .speaker.teaser { cursor: default; }

@@ -1,6 +1,8 @@
 export default function Hero() {
   return (
     <section className="hero">
+      <span className="blob blob-gold" style={{ width: 280, height: 280, right: -150, top: -170, opacity: 0.8 }} />
+      <span className="blob blob-royal" style={{ width: 70, height: 70, left: "3%", top: "24%", opacity: 0.45 }} />
       <div className="container">
         <div className="hero-grid">
           <div className="hero-copy">
@@ -10,7 +12,14 @@ export default function Hero() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="hero-logo" src="/assets/img/visio-logo.png" alt="VISIO logo" />
             <h1>
-              Fii parte din următoarea generație de antreprenori a României.
+              Fii parte din următoarea{" "}
+              <span className="brush">
+                <svg className="brush-mark" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M6 28 C 60 10, 150 20, 220 16 C 300 11, 360 24, 396 12 L 394 100 C 330 114, 240 100, 160 107 C 92 112, 34 104, 6 112 Z" />
+                </svg>
+                <span className="brush-word">generație</span>
+              </span>{" "}
+              de antreprenori a României.
             </h1>
             <p className="hero-lead">
               VISIO este mai mult decât o conferință. Este locul în care viitorul antreprenoriatului
@@ -86,7 +95,7 @@ export default function Hero() {
               />
               <path
                 className="hv-arrow-head"
-                d="M176 26 l-34 4 M176 26 l-4 34"
+                d="M176 26 l-28 2 M176 26 l-2 28"
                 stroke="url(#hvArrowGrad)"
                 strokeWidth="24"
                 strokeLinecap="round"
@@ -99,6 +108,9 @@ export default function Hero() {
               <div className="hv-shape hv-shape-2" aria-hidden="true" />
             </div>
 
+            <span className="hv-halftone hv-halftone--a" aria-hidden="true" />
+            <span className="hv-halftone hv-halftone--b" aria-hidden="true" />
+
             <div className="hv-frame">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -106,6 +118,16 @@ export default function Hero() {
                 alt="Liceeni ridicând mâinile, hotărâți să construiască viitorul"
               />
             </div>
+
+            <span className="hv-hand" aria-hidden="true">
+              Curaj. Viziune.{" "}
+              <span className="hv-hand-impact">
+                Impact.
+                <svg className="hv-hand-ring" viewBox="0 0 160 70" fill="none" aria-hidden="true">
+                  <path d="M20 44 C 8 20, 44 8, 82 8 C 128 8, 152 24, 148 40 C 144 58, 96 66, 56 62 C 24 59, 10 46, 26 30" />
+                </svg>
+              </span>
+            </span>
           </div>
         </div>
 

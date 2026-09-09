@@ -12,7 +12,7 @@ const speakers: Speaker[] = [
   {
     id: "radu",
     name: "Radu Savopol",
-    role: "Co-fondator\n5 to go",
+    role: "Co-fondator & CEO\n5 to go",
     photoClass: "p-radu",
   },
   {
@@ -22,14 +22,16 @@ const speakers: Speaker[] = [
     photoClass: "p-ioana",
   },
   {
-    id: "tba3",
-    name: "Speaker 03",
-    role: "Urmează să fie anunțat",
+    id: "sergiu",
+    name: "Sergiu Manea",
+    role: "CEO\nBanca Comercială Română",
+    photoClass: "p-sergiu",
   },
   {
-    id: "tba4",
-    name: "Speaker 04",
-    role: "Urmează să fie anunțat",
+    id: "felixt",
+    name: "Felix Tătaru",
+    role: "Vicepreședinte IAA Global\nFondator & Președinte, GMP Group",
+    photoClass: "p-felixt",
   },
   {
     id: "tba5",

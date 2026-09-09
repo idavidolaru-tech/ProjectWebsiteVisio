@@ -27,7 +27,6 @@ export default function CTA() {
           </a>
         </div>
         <p className="cta-phone">
-          Sau sună-ne la <a href="tel:+40730752455">+40 730 752 455</a>
         </p>
       </div>
     </section>
