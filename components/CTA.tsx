@@ -10,7 +10,13 @@ export default function CTA() {
         <h2>Vrei să faci parte din VISIO 2026?</h2>
         <p>Fie că ești elev, școală, partener sau viitor speaker — scrie-ne și urmărește parcursul pe măsură ce programul prinde contur.</p>
         <div className="cta-actions">
-          <a className="btn btn-primary" href="mailto:hello@visioinitiative.ro">
+          <a className="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSclUoJHQ5YQNZjrFckpzrTn06I0_83FRSjeTsKgrJQddn8GMQ/viewform" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+            Înscrie-te
+          </a>
+          <a className="btn btn-ghost" style={{ color: "#fff", borderColor: "rgba(255,255,255,.4)" }} href="mailto:hello@visioinitiative.ro">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="5" width="18" height="14" rx="2.5" />
               <path d="m3.5 6.5 8.5 6 8.5-6" />

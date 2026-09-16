@@ -54,8 +54,8 @@ export default function Hero() {
             </div>
 
             <div className="hero-actions">
-              <a className="btn btn-primary" href="#contact">
-                Implică-te
+              <a className="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSclUoJHQ5YQNZjrFckpzrTn06I0_83FRSjeTsKgrJQddn8GMQ/viewform" target="_blank" rel="noopener noreferrer">
+                Înscrie-te
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
