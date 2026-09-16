@@ -189,9 +189,11 @@ img { max-width: 100%; display: block; }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
-.hero-foundation { display: flex; align-items: center; gap: 12px; margin-top: 40px; color: var(--muted); font-size: .84rem; }
+.hero-foundation { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 40px; color: var(--muted); font-size: .84rem; }
 .hero-foundation img { height: 40px; opacity: .95; }
 .hero-foundation .lr-logo { height: 58px; }
+.hero-foundation .bcr-logo { height: 26px; }
+.hero-foundation .hf-divider { width: 1px; height: 30px; background: var(--border, rgba(19,23,83,.16)); }
 
 /* Enlarged, uppercase confirmed date */
 .ei-value.is-date { text-transform: uppercase; font-size: clamp(1.35rem, 2.3vw, 1.75rem); letter-spacing: .005em; }
@@ -201,6 +203,10 @@ img { max-width: 100%; display: block; }
   position: relative; align-self: stretch; display: grid; place-items: center;
   min-height: 420px; z-index: 1;
 }
+
+/* Anchors the arrow/halftones/tag to the photo card itself, not the whole
+   (taller, text-column-matching) hero-visual column */
+.hv-stack { position: relative; width: min(100%, 400px); }
 
 /* Geometric shapes */
 .hv-shapes { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
@@ -245,13 +251,6 @@ img { max-width: 100%; display: block; }
 }
 @keyframes hv-draw { to { stroke-dashoffset: 0; } }
 
-/* Upward gradient arrow */
-.hv-arrow {
-  position: absolute; z-index: 1; width: 110%; height: 118%;
-  right: -5%; top: -16%; overflow: visible; pointer-events: none;
-  filter: drop-shadow(0 14px 26px rgba(19,23,83,.18));
-}
-
 /* Framed group photo */
 .hv-frame {
   position: relative; z-index: 3; width: min(100%, 400px);
@@ -264,7 +263,7 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 560px) {
-  .hv-arrow, .hv-halftone { display: none; }
+  .hv-halftone { display: none; }
   .hv-hand { position: static; rotate: -2deg; display: block; margin: 16px auto 0; text-align: center; }
 }
 
@@ -449,11 +448,12 @@ top: -7px;}
 .speaker-photo.p-felixp  { background-image: url("/assets/speakers/felix-patrascanu.jpg"); background-position: 50% 20%; }
 .speaker-photo.p-emil    { background-image: url("/assets/speakers/emil-munteanu.jpg");   background-position: 50% 14%; }
 .speaker-photo.p-ioana   { background-image: url("/assets/speakers/ioana-ceausu.jpg");     background-position: 53% 45%; }
-.speaker-photo.p-alex    { background-image: url("/assets/speakers/alexandru-lapusan.jpg"); background-position: 50% 20%; }
+.speaker-photo.p-alex    { background-image: url("/assets/speakers/alexandru-lapusan.jpeg"); background-position: 50% 20%; }
 .speaker-photo.p-sergiu  { background-image: url("/assets/speakers/sergiu-manea.jpeg");     background-position: 48% 12%; }
 .speaker-photo.p-radu    { background-image: url("/assets/speakers/radu-savopol.jpg");     background-position: 55% 16%; }
 .speaker-photo.p-marius  { background-image: url("/assets/speakers/marius-bostan.jpg");    background-position: 50% 30%; }
 .speaker-photo.p-felixt  { background-image: url("/assets/speakers/felix-tataru.jpeg");    background-position: 46% 16%; }
+.speaker-photo.p-cristina { background-image: url("/assets/speakers/cristina-batlan.jpeg"); background-position: 50% 20%; }
 
 /* Speakers "to be announced" — black silhouettes */
 .speaker.teaser { cursor: default; }

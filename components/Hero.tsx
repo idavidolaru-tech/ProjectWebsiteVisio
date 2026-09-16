@@ -73,61 +73,45 @@ export default function Hero() {
                 src="/assets/img/laude-reut-logo.png"
                 alt="Laude-Reut — Academia Interdisciplinară a Viitorului"
               />
+              <span className="hf-divider" aria-hidden="true" />
+              <span>Powered by</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                className="bcr-logo"
+                src="/assets/img/BCR_logo.svg.webp"
+                alt="BCR"
+              />
             </div>
           </div>
 
           <div className="hero-visual">
-            <svg className="hv-arrow" viewBox="0 0 200 200" fill="none" aria-hidden="true">
-              <defs>
-                <linearGradient id="hvArrowGrad" x1="0" y1="1" x2="1" y2="0">
-                  <stop offset="0" stopColor="var(--royal)" />
-                  <stop offset="0.45" stopColor="#17a6c6" />
-                  <stop offset="0.72" stopColor="var(--gold)" />
-                  <stop offset="1" stopColor="var(--gold)" />
-                </linearGradient>
-              </defs>
-              <path
-                className="hv-arrow-line"
-                d="M22 178 C 66 150, 92 120, 176 26"
-                stroke="url(#hvArrowGrad)"
-                strokeWidth="24"
-                strokeLinecap="round"
-              />
-              <path
-                className="hv-arrow-head"
-                d="M176 26 l-28 2 M176 26 l-2 28"
-                stroke="url(#hvArrowGrad)"
-                strokeWidth="24"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-
             <div className="hv-shapes">
               <div className="hv-shape hv-shape-1" aria-hidden="true" />
               <div className="hv-shape hv-shape-2" aria-hidden="true" />
             </div>
 
-            <span className="hv-halftone hv-halftone--a" aria-hidden="true" />
-            <span className="hv-halftone hv-halftone--b" aria-hidden="true" />
+            <div className="hv-stack">
+              <span className="hv-halftone hv-halftone--a" aria-hidden="true" />
+              <span className="hv-halftone hv-halftone--b" aria-hidden="true" />
 
-            <div className="hv-frame">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/assets/img/visio-students.jpg"
-                alt="Liceeni ridicând mâinile, hotărâți să construiască viitorul"
-              />
-            </div>
+              <div className="hv-frame">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/assets/img/visio-students.jpg"
+                  alt="Liceeni ridicând mâinile, hotărâți să construiască viitorul"
+                />
+              </div>
 
-            <span className="hv-hand" aria-hidden="true">
-              Curaj. Viziune.{" "}
-              <span className="hv-hand-impact">
-                Impact.
-                <svg className="hv-hand-ring" viewBox="0 0 160 70" fill="none" aria-hidden="true">
-                  <path d="M20 44 C 8 20, 44 8, 82 8 C 128 8, 152 24, 148 40 C 144 58, 96 66, 56 62 C 24 59, 10 46, 26 30" />
-                </svg>
+              <span className="hv-hand" aria-hidden="true">
+                Curaj. Viziune.{" "}
+                <span className="hv-hand-impact">
+                  Impact.
+                  <svg className="hv-hand-ring" viewBox="0 0 160 70" fill="none" aria-hidden="true">
+                    <path d="M20 44 C 8 20, 44 8, 82 8 C 128 8, 152 24, 148 40 C 144 58, 96 66, 56 62 C 24 59, 10 46, 26 30" />
+                  </svg>
+                </span>
               </span>
-            </span>
+            </div>
           </div>
         </div>
 

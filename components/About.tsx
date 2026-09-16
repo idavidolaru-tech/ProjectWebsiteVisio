@@ -33,7 +33,7 @@ export default function About() {
             <span className="blob blob-gold" />
             <span className="blob blob-royal" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="round-photo" src="/assets/img/students.png" alt="Liceeni implicați la o sesiune VISIO" />
+            <img className="round-photo" src="/assets/img/visio-crowd-cheering.jpeg" alt="Liceeni bucuroși, cu mâinile ridicate, la o sesiune VISIO" />
           </div>
         </div>
       </div>

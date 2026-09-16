@@ -38,8 +38,13 @@ export default function Header() {
           ))}
         </ul>
         <div className="nav-cta">
-          <a className="btn btn-navy" href="#contact">
-            Implică-te
+          <a
+            className="btn btn-navy"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSclUoJHQ5YQNZjrFckpzrTn06I0_83FRSjeTsKgrJQddn8GMQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Înscrie-te
           </a>
           <button
             className="nav-toggle"

@@ -34,14 +34,16 @@ const speakers: Speaker[] = [
     photoClass: "p-felixt",
   },
   {
-    id: "tba5",
-    name: "Speaker 05",
-    role: "Urmează să fie anunțat",
+    id: "alex",
+    name: "Alexandru Lăpușan",
+    role: "Co-fondator & CEO\nZitec",
+    photoClass: "p-alex",
   },
   {
-    id: "tba6",
-    name: "Speaker 06",
-    role: "Urmează să fie anunțat",
+    id: "cristina",
+    name: "Cristina Bâtlan",
+    role: "Co-fondator\nMusette",
+    photoClass: "p-cristina",
   },
   {
     id: "tba7",
