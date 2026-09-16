@@ -48,7 +48,7 @@ export default function Hero() {
                 </span>
                 <div>
                   <span className="event-label">Locație</span>
-                  <b className="event-value">București</b>
+                  <b className="event-value">ZBOR Hub ASE</b>
                 </div>
               </div>
             </div>
