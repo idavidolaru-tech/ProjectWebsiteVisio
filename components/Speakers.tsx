@@ -46,9 +46,10 @@ const speakers: Speaker[] = [
     photoClass: "p-cristina",
   },
   {
-    id: "tba7",
-    name: "Speaker 07",
-    role: "Urmează să fie anunțat",
+    id: "marius",
+    name: "Marius Bostan",
+    role: "Fondator\nRePatriot",
+    photoClass: "p-marius",
   },
   {
     id: "tba8",

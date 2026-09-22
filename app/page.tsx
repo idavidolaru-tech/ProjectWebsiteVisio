@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Challenge from "@/components/Challenge";
 import Speakers from "@/components/Speakers";
 import Program from "@/components/Program";
+import Partners from "@/components/Partners";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -23,6 +24,7 @@ export default function Home() {
         <Challenge />
         <Speakers />
         <Program />
+        <Partners />
         <CTA />
       </main>
       <Footer />
