@@ -449,7 +449,6 @@ top: -7px;}
 .speaker-photo.p-emil    { background-image: url("/assets/speakers/emil-munteanu.jpg");   background-position: 50% 14%; }
 .speaker-photo.p-ioana   { background-image: url("/assets/speakers/ioana-ceausu.jpg");     background-position: 53% 45%; }
 .speaker-photo.p-alex    { background-image: url("/assets/speakers/alexandru-lapusan.jpeg"); background-position: 50% 20%; }
-.speaker-photo.p-sergiu  { background-image: url("/assets/speakers/sergiu-manea.jpeg");     background-position: 48% 12%; }
 .speaker-photo.p-radu    { background-image: url("/assets/speakers/radu-savopol.jpg");     background-position: 55% 16%; }
 .speaker-photo.p-marius  { background-image: url("/assets/speakers/marius-bostan.jpg");    background-position: 50% 30%; }
 .speaker-photo.p-felixt  { background-image: url("/assets/speakers/felix-tataru.jpeg");    background-position: 46% 16%; }
@@ -524,6 +523,15 @@ top: -7px;}
 .chip .ic svg { width: 24px; height: 24px; }
 .chip b { display: block; font-family: var(--font-head); font-weight: 600; color: var(--navy); font-size: 1.02rem; }
 .chip span { color: var(--muted); font-size: .86rem; }
+
+.chip-featured { grid-column: 1 / -1; padding: 22px 26px; }
+.chip-photo {
+  flex: none; width: 72px; height: 72px; border-radius: 50%; background-repeat: no-repeat;
+  background-image: url("/assets/speakers/Nico-768x960.jpeg"); background-size: cover; background-position: 50% 12%;
+  background-color: var(--bg-2); border: 3px solid #fff; box-shadow: 0 0 0 3px var(--blue), var(--shadow-sm);
+}
+.chip-tagline { display: block; font-style: italic; color: var(--royal); margin-top: 2px; }
+.chip-presenter { display: block; margin-top: 6px; color: var(--ink-soft); font-size: .86rem; }
 
 /* ---------- Partners ---------- */
 .partners-grid {

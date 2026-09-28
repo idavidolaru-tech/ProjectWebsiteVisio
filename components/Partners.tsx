@@ -7,7 +7,7 @@ interface Partner {
 const partners: Partner[] = [
   { name: "Mega Image", logo: "/assets/img/Logo_Mega_Image.svg.webp" },
   { name: "Upgrade Education", logo: "/assets/img/upgrade-education-logo.svg", showName: true },
-  { name: "Kandia", logo: "/assets/img/kandia-logo.png" },
+  { name: "The Entrepreneurship Academy", logo: "/assets/img/Logo-EA-Contact-Page.svg" },
 ];
 
 export default function Partners() {

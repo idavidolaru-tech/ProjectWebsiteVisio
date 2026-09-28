@@ -22,12 +22,6 @@ const speakers: Speaker[] = [
     photoClass: "p-ioana",
   },
   {
-    id: "sergiu",
-    name: "Sergiu Manea",
-    role: "CEO\nBanca Comercială Română",
-    photoClass: "p-sergiu",
-  },
-  {
     id: "felixt",
     name: "Felix Tătaru",
     role: "Vicepreședinte IAA Global\nFondator & Președinte, GMP Group",
@@ -50,6 +44,11 @@ const speakers: Speaker[] = [
     name: "Marius Bostan",
     role: "Fondator\nRePatriot",
     photoClass: "p-marius",
+  },
+  {
+    id: "tba7",
+    name: "Speaker 07",
+    role: "Urmează să fie anunțat",
   },
   {
     id: "tba8",
