@@ -46,9 +46,10 @@ const speakers: Speaker[] = [
     photoClass: "p-marius",
   },
   {
-    id: "tba7",
-    name: "Speaker 07",
-    role: "Urmează să fie anunțat",
+    id: "dana",
+    name: "Dana Dima",
+    role: "Vicepreședinte Retail & Private Banking\nBCR",
+    photoClass: "p-dana",
   },
   {
     id: "tba8",

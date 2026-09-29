@@ -192,7 +192,7 @@ img { max-width: 100%; display: block; }
 .hero-foundation { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 40px; color: var(--muted); font-size: .84rem; }
 .hero-foundation img { height: 40px; opacity: .95; }
 .hero-foundation .lr-logo { height: 58px; }
-.hero-foundation .bcr-logo { height: 26px; }
+.hero-foundation .bcr-logo { height: 44px; }
 .hero-foundation .hf-divider { width: 1px; height: 30px; background: var(--border, rgba(19,23,83,.16)); }
 
 /* Enlarged, uppercase confirmed date */
@@ -453,6 +453,7 @@ top: -7px;}
 .speaker-photo.p-marius  { background-image: url("/assets/speakers/marius-bostan.jpg");    background-position: 50% 30%; }
 .speaker-photo.p-felixt  { background-image: url("/assets/speakers/felix-tataru.jpeg");    background-position: 46% 16%; }
 .speaker-photo.p-cristina { background-image: url("/assets/speakers/cristina-batlan.jpeg"); background-position: 50% 20%; }
+.speaker-photo.p-dana    { background-image: url("/assets/speakers/dana-dima.jpeg");       background-position: 50% 20%; }
 
 /* Speakers "to be announced" — black silhouettes */
 .speaker.teaser { cursor: default; }

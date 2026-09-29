@@ -78,7 +78,7 @@ export default function Hero() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="bcr-logo"
-                src="/assets/img/BCR_logo.svg.webp"
+                src="/assets/img/BCR2.png"
                 alt="BCR"
               />
             </div>
