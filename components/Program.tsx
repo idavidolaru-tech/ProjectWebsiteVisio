@@ -62,16 +62,11 @@ export default function Program() {
                 <span className="chip-presenter">Nicoleta Munteanu — Avocat &amp; Antreprenor, Vicepreședintă CONAF</span>
               </div>
             </div>
-            <div className="chip tba reveal">
-              <span className="ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 7.5V12l3 2" />
-                </svg>
-              </span>
+            <div className="chip chip-featured reveal">
+              <div className="chip-photo chip-photo-silviu" role="img" aria-label="Portret Silviu Hotaran" />
               <div>
-                <b>Atelier 02</b>
-                <span>Urmează să fie anunțat</span>
+                <b>Atelier 02 — Viziune și Leadership</b>
+                <span className="chip-presenter">Silviu Hotaran — Co-Founder &amp; Hansen Beck Certified Business Trainer &amp; Representative for Romania</span>
               </div>
             </div>
             <div className="chip tba reveal">

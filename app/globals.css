@@ -531,6 +531,7 @@ top: -7px;}
   background-image: url("/assets/speakers/Nico-768x960.jpeg"); background-size: cover; background-position: 50% 12%;
   background-color: var(--bg-2); border: 3px solid #fff; box-shadow: 0 0 0 3px var(--blue), var(--shadow-sm);
 }
+.chip-photo-silviu { background-image: url("/assets/speakers/silviu-hotaran.jpg"); background-position: 50% 20%; }
 .chip-tagline { display: block; font-style: italic; color: var(--royal); margin-top: 2px; }
 .chip-presenter { display: block; margin-top: 6px; color: var(--ink-soft); font-size: .86rem; }
 
