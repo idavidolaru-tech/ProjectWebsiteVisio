@@ -2,12 +2,15 @@ interface Partner {
   name: string;
   logo: string;
   showName?: boolean;
+  wide?: boolean;
+  tall?: boolean;
 }
 
 const partners: Partner[] = [
   { name: "Mega Image", logo: "/assets/img/Logo_Mega_Image.svg.webp" },
-  { name: "Upgrade Education", logo: "/assets/img/upgrade-education-logo.svg", showName: true },
+  { name: "Upgrade Education", logo: "/assets/img/upgrade-education-logo.svg", tall: true },
   { name: "The Entrepreneurship Academy", logo: "/assets/img/Logo-EA-Contact-Page.svg" },
+  { name: "VSFA — Vreau să fiu antreprenor", logo: "/assets/img/vsfa-logo.png", wide: true },
 ];
 
 export default function Partners() {
@@ -22,7 +25,7 @@ export default function Partners() {
 
         <div className="partners-grid">
           {partners.map((partner) => (
-            <div className="partner-card" key={partner.name}>
+            <div className={`partner-card${partner.wide ? " wide" : ""}${partner.tall ? " tall" : ""}`} key={partner.name}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={partner.logo} alt={partner.name} />
               {partner.showName && <span>{partner.name}</span>}

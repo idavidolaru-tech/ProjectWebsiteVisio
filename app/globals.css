@@ -453,6 +453,7 @@ top: -7px;}
 .speaker-photo.p-marius  { background-image: url("/assets/speakers/marius-bostan.jpg");    background-position: 50% 30%; }
 .speaker-photo.p-felixt  { background-image: url("/assets/speakers/felix-tataru.jpeg");    background-position: 46% 16%; }
 .speaker-photo.p-cristina { background-image: url("/assets/speakers/cristina-batlan.jpeg"); background-position: 50% 20%; }
+.speaker-photo.p-cosmin  { background-image: url("/assets/speakers/cosmin-sava.jpeg");     background-position: 50% 20%; }
 .speaker-photo.p-dana    { background-image: url("/assets/speakers/dana-dima.jpeg");       background-position: 50% 20%; }
 
 /* Speakers "to be announced" — black silhouettes */
@@ -472,6 +473,9 @@ top: -7px;}
 .speaker.teaser:focus-visible .speaker-photo.silhouette {
   box-shadow: 0 0 0 4px var(--gold), 0 14px 30px rgba(19,23,83,.28);
 }
+.moderator-row { display: flex; justify-content: center; margin-bottom: clamp(16px, 2vw, 26px); }
+.moderator-row .speaker { width: min(100%, 300px); cursor: default; border-color: var(--gold); }
+.moderator-row .speaker .tba-badge { background: var(--navy); color: var(--gold); }
 .speaker h3 { font-size: 1.16rem; margin-bottom: 4px; }
 .speaker .role { color: var(--ink-soft); font-size: .92rem; line-height: 1.35; }
 .speaker .role b { color: var(--blue); font-weight: 600; }
@@ -547,6 +551,9 @@ top: -7px;}
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .partner-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.partner-card.wide { width: clamp(240px, 34vw, 340px); }
+.partner-card.wide img { height: auto; width: 100%; }
+.partner-card.tall img { height: 104px; }
 .partner-card img { max-width: 100%; height: 56px; width: auto; object-fit: contain; }
 .partner-card span { font-family: var(--font-head); font-weight: 600; font-size: .92rem; color: var(--navy); text-align: center; }
 

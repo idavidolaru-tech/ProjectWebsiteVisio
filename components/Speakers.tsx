@@ -6,9 +6,24 @@ interface Speaker {
   role: string;
   photo?: string;
   photoClass?: string;
+  badge?: string;
 }
 
+const moderator: Speaker = {
+  id: "cosmin",
+  name: "Cosmin Sava",
+  role: "Project Manager\nVSFA",
+  photoClass: "p-cosmin",
+  badge: "MODERATOR",
+};
+
 const speakers: Speaker[] = [
+  {
+    id: "felixp",
+    name: "Felix Pătrășcanu",
+    role: "Co-fondator\nFAN Courier",
+    photoClass: "p-felixp",
+  },
   {
     id: "radu",
     name: "Radu Savopol",
@@ -52,11 +67,6 @@ const speakers: Speaker[] = [
     photoClass: "p-dana",
   },
   {
-    id: "tba8",
-    name: "Speaker 08",
-    role: "Urmează să fie anunțat",
-  },
-  {
     id: "tba9",
     name: "Speaker 09",
     role: "Urmează să fie anunțat",
@@ -73,8 +83,9 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
   const photoClass = speaker.photoClass ? `speaker-photo ${speaker.photoClass}` : "speaker-photo silhouette";
 
   return (
-    <article className="speaker reveal">
+    <article className={`speaker reveal${speaker.badge ? " moderator" : ""}`}>
       {isTBA && <span className="tba-badge">TBA</span>}
+      {speaker.badge && <span className="tba-badge">{speaker.badge}</span>}
       <div className={photoClass} role="img" aria-label={isTBA ? "Speaker care urmează să fie anunțat" : `Portret ${speaker.name}`}>
         {isTBA && (
           <svg viewBox="0 0 24 24" fill="currentColor">
@@ -97,6 +108,10 @@ export default function Speakers() {
           <span className="section-tag">Pe scenă</span>
           <h2 className="section-title">Speakeri</h2>
           <p className="section-intro">Primii invitați confirmați — și mulți alții urmează să fie anunțați. Pregătește-te pentru o scenă pe măsură.</p>
+        </div>
+
+        <div className="moderator-row">
+          <SpeakerCard speaker={moderator} />
         </div>
 
         <div className="speakers-grid">
