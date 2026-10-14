@@ -37,10 +37,10 @@ const speakers: Speaker[] = [
     photoClass: "p-ioana",
   },
   {
-    id: "felixt",
-    name: "Felix Tătaru",
-    role: "Vicepreședinte IAA Global\nFondator & Președinte, GMP Group",
-    photoClass: "p-felixt",
+    id: "ghenea",
+    name: "Marius Ghenea",
+    role: "Managing Partner\nCatalyst România Fund II",
+    photoClass: "p-ghenea",
   },
   {
     id: "alex",
